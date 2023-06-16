@@ -90,6 +90,12 @@ app.get('/elements', (req, res) => {
         titulo: 'Curso de Node'
     });
 })
+app.get('/salidas', (req, res) => {
+    res.render('salidas', { //Estos son los argumentos
+        nombre: 'Mauro Retuerto Santillan',
+        titulo: 'Curso de Node'
+    });
+})
 app.get('*', (req, res) => {
     res.sendFile(__dirname + '/public/404.html');
 })
